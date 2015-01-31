@@ -1,0 +1,63 @@
+#####CUFFLINKS CONFIGURATION#####
+###REQUIRED###
+#cufflinks output folder name
+cufflinks_out_folder:cuff_6hout
+
+#cufflinks input bam file, specify the full path
+cufflinks_bam:tophat/ZV9_6h/accepted_hits.bam
+
+######
+
+###OPTIONAL###
+#cufflinks assembly, either "strict" or "guided"
+cufflinks_assembly:strict
+
+#cufflinks annotation
+cufflinks_annote:annotation/Danio_rerio.Zv9.66.gtf
+
+#cufflinks bias detection, either "Y" or "N"
+cufflinks_bias:Y
+
+#if bias detection is Y, specify the full-path multi fasta genomic sequence file
+cufflinks_bias_genome:genome/Danio_rerio.Zv9.66.dna.fa
+
+#cufflinks initial estimation, either "Y" or "N"
+cufflinks_init:Y
+
+#cufflinks library-type, either "fr-unstranded", "fr-firststrand" or "fr-secondstrand"
+cufflinks_lib_type:fr-unstranded
+######
+##########
+
+#####CUFFDIFF CONFIGURATION#####
+###REQUIRED###
+#cuffdiff output folder name
+cuffdiff_out_folder:cuffdiff_6hout
+
+#cuffdiff input bam file, specify the full path, separate by space
+cuffdiff_bam:tophat/ZV9_2cells/accepted_hits.bam tophat/ZV9_6h/accepted_hits.bam
+
+#cuffdiff annotation
+cuffdiff_annote:annotation/Danio_rerio.Zv9.66.gtf
+
+######
+
+###OPTIONAL###
+#cuffdiff label for different condition, separate by ","
+cuffdiff_cond:ZV9_2cells,ZV9_6h
+
+#cuffdiff time series, either "Y" or "N"
+cuffdiff_time:Y
+
+#cuffdiff initial estimation, either "Y" or "N"
+cuffdiff_init:Y
+
+#cuffdiff bias detection, either "Y" or "N"
+cuffdiff_bias:Y
+
+#if bias detection is Y, specify the full-path multi fasta genomic sequence file
+cuffdiff_bias_genome:genome/Danio_rerio.Zv9.66.dna.fa
+
+#cuffdiff library-type, either "fr-unstranded", "fr-firststrand" or "fr-secondstrand"
+cuffdiff_lib_type:fr-unstranded
+######
