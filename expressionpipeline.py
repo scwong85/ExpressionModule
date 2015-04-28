@@ -6,7 +6,7 @@ config = {}
 #read config
 def read_config():
 	#configfile = sys.argv[1]
-	configfile = 'pipe2config'
+	configfile = 'expressionconfig'
 	f = open(configfile, 'r')
 	for line in f:
 		if '#' not in line and len(line) > 2:
